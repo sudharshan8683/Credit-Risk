@@ -1,0 +1,30 @@
+# Virtual Environment
+venv/
+backend/venv/
+ENV/
+env/
+.env
+
+# Python Cache & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Node & Frontend
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+.npm
+*.tsbuildinfo
+
+# IDE & System
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
+Score
+powershell.bat

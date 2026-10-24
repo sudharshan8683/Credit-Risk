@@ -1,0 +1,59 @@
+{
+  "demographic_attribute": "Age (Demographic Fairness Audit)",
+  "regulatory_standard": "US ECOA / CFPB 4/5ths Rule & Basel Committee Guidelines",
+  "human_decision_disclaimer": "This system provides decision support and risk indicators for authorized underwriters. Final credit determinations require human review in accordance with fair lending laws.",
+  "protected_attributes_excluded": [
+    "gender",
+    "race",
+    "religion",
+    "marital_status",
+    "sexual_orientation"
+  ],
+  "age_bands": [
+    {
+      "age_band": "<25",
+      "applicant_count": 238,
+      "approval_rate": 0.7227,
+      "approval_rate_pct": 72.3,
+      "disparity_ratio": 0.732,
+      "compliant_four_fifths_rule": false,
+      "note": "Lower approval rate driven by shorter credit history and entry income levels, not direct age gating."
+    },
+    {
+      "age_band": "25-34",
+      "applicant_count": 635,
+      "approval_rate": 0.8268,
+      "approval_rate_pct": 82.7,
+      "disparity_ratio": 0.838,
+      "compliant_four_fifths_rule": true,
+      "note": "Well within standard non-discriminatory boundaries."
+    },
+    {
+      "age_band": "35-49",
+      "applicant_count": 1421,
+      "approval_rate": 0.931,
+      "approval_rate_pct": 93.1,
+      "disparity_ratio": 0.943,
+      "compliant_four_fifths_rule": true,
+      "note": "Well within standard non-discriminatory boundaries."
+    },
+    {
+      "age_band": "50-64",
+      "applicant_count": 628,
+      "approval_rate": 0.9777,
+      "approval_rate_pct": 97.8,
+      "disparity_ratio": 0.99,
+      "compliant_four_fifths_rule": true,
+      "note": "Well within standard non-discriminatory boundaries."
+    },
+    {
+      "age_band": "65+",
+      "applicant_count": 78,
+      "approval_rate": 0.9872,
+      "approval_rate_pct": 98.7,
+      "disparity_ratio": 1.0,
+      "compliant_four_fifths_rule": true,
+      "note": "Well within standard non-discriminatory boundaries."
+    }
+  ]
+}

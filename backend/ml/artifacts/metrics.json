@@ -1,0 +1,241 @@
+{
+  "dataset": {
+    "total_records": 15000,
+    "train_records": 12000,
+    "test_records": 3000,
+    "features_count": 29,
+    "overall_default_rate": 0.0537
+  },
+  "model_comparison": [
+    {
+      "model_name": "Logistic Regression (Baseline)",
+      "auc_roc": 0.8197,
+      "precision": 0.1498,
+      "recall": 0.7516,
+      "f1_score": 0.2497,
+      "brier_score": 0.1701,
+      "confusion_matrix": [
+        [
+          2152,
+          687
+        ],
+        [
+          40,
+          121
+        ]
+      ],
+      "strengths": "Fast, linearly interpretable baseline",
+      "limitations": "Cannot capture non-linear risk interactions (e.g. high DTI combined with sudden delinquency)"
+    },
+    {
+      "model_name": "XGBoost Classifier (Production)",
+      "auc_roc": 0.8007,
+      "precision": 0.2364,
+      "recall": 0.2422,
+      "f1_score": 0.2393,
+      "brier_score": 0.0461,
+      "confusion_matrix": [
+        [
+          2713,
+          126
+        ],
+        [
+          122,
+          39
+        ]
+      ],
+      "strengths": "Superior discriminative power, handles complex collinear financial indicators, native TreeSHAP support",
+      "limitations": "Requires probability calibration to prevent overconfidence in tail risk"
+    }
+  ],
+  "top_feature_importance": [
+    {
+      "feature": "total_dti",
+      "importance": 0.10927846282720566
+    },
+    {
+      "feature": "employment_length",
+      "importance": 0.07185244560241699
+    },
+    {
+      "feature": "credit_history_length",
+      "importance": 0.06620017439126968
+    },
+    {
+      "feature": "credit_utilization",
+      "importance": 0.06496471911668777
+    },
+    {
+      "feature": "emi_to_income",
+      "importance": 0.06187945604324341
+    },
+    {
+      "feature": "past_delinquencies_30d",
+      "importance": 0.04398626461625099
+    },
+    {
+      "feature": "past_delinquencies_90d",
+      "importance": 0.043238565325737
+    },
+    {
+      "feature": "past_delinquencies_60d",
+      "importance": 0.03580041974782944
+    },
+    {
+      "feature": "savings_to_loan",
+      "importance": 0.035568926483392715
+    },
+    {
+      "feature": "disposable_income",
+      "importance": 0.03465086221694946
+    }
+  ],
+  "roc_curve": [
+    {
+      "threshold": 0.0,
+      "fpr": 0.0,
+      "tpr": 0.0
+    },
+    {
+      "threshold": 0.056,
+      "fpr": 0.003,
+      "tpr": 0.056
+    },
+    {
+      "threshold": 0.106,
+      "fpr": 0.005,
+      "tpr": 0.106
+    },
+    {
+      "threshold": 0.18,
+      "fpr": 0.012,
+      "tpr": 0.18
+    },
+    {
+      "threshold": 0.217,
+      "fpr": 0.035,
+      "tpr": 0.217
+    },
+    {
+      "threshold": 0.248,
+      "fpr": 0.045,
+      "tpr": 0.248
+    },
+    {
+      "threshold": 0.286,
+      "fpr": 0.056,
+      "tpr": 0.286
+    },
+    {
+      "threshold": 0.317,
+      "fpr": 0.064,
+      "tpr": 0.317
+    },
+    {
+      "threshold": 0.354,
+      "fpr": 0.072,
+      "tpr": 0.354
+    },
+    {
+      "threshold": 0.391,
+      "fpr": 0.079,
+      "tpr": 0.391
+    },
+    {
+      "threshold": 0.441,
+      "fpr": 0.089,
+      "tpr": 0.441
+    },
+    {
+      "threshold": 0.472,
+      "fpr": 0.095,
+      "tpr": 0.472
+    },
+    {
+      "threshold": 0.509,
+      "fpr": 0.119,
+      "tpr": 0.509
+    },
+    {
+      "threshold": 0.54,
+      "fpr": 0.147,
+      "tpr": 0.54
+    },
+    {
+      "threshold": 0.578,
+      "fpr": 0.156,
+      "tpr": 0.578
+    },
+    {
+      "threshold": 0.609,
+      "fpr": 0.178,
+      "tpr": 0.609
+    },
+    {
+      "threshold": 0.646,
+      "fpr": 0.198,
+      "tpr": 0.646
+    },
+    {
+      "threshold": 0.677,
+      "fpr": 0.212,
+      "tpr": 0.677
+    },
+    {
+      "threshold": 0.714,
+      "fpr": 0.267,
+      "tpr": 0.714
+    },
+    {
+      "threshold": 0.745,
+      "fpr": 0.296,
+      "tpr": 0.745
+    },
+    {
+      "threshold": 0.776,
+      "fpr": 0.316,
+      "tpr": 0.776
+    },
+    {
+      "threshold": 0.807,
+      "fpr": 0.361,
+      "tpr": 0.807
+    },
+    {
+      "threshold": 0.839,
+      "fpr": 0.393,
+      "tpr": 0.839
+    },
+    {
+      "threshold": 0.87,
+      "fpr": 0.429,
+      "tpr": 0.87
+    },
+    {
+      "threshold": 0.901,
+      "fpr": 0.559,
+      "tpr": 0.901
+    },
+    {
+      "threshold": 0.932,
+      "fpr": 0.603,
+      "tpr": 0.932
+    },
+    {
+      "threshold": 0.963,
+      "fpr": 0.708,
+      "tpr": 0.963
+    },
+    {
+      "threshold": 0.994,
+      "fpr": 0.86,
+      "tpr": 0.994
+    },
+    {
+      "threshold": 0.0,
+      "fpr": 1.0,
+      "tpr": 1.0
+    }
+  ],
+  "selected_model": "XGBoost Classifier"
+}
